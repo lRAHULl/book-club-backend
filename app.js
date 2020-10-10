@@ -1,13 +1,11 @@
 const express = require('express');
+const indexRoutes = require('./routes/main')
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-app.get("/", (req, res) => {
-  res.json({
-    "name": "rahul",
-    "id": 1
-  })
-});
+app.use('/', indexRoutes)
 
-app.listen(PORT);
+app.listen(PORT, () => {
+  console.log(`Server started at port: ${PORT}`);
+});
