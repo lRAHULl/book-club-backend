@@ -11,6 +11,8 @@
   "author": "Rahul P",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "googleapis": "^61.0.0",
+    "require": "^2.4.20"
   }
 }
