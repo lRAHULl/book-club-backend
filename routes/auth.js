@@ -33,7 +33,7 @@ function getGoogleAuthURL() {
     access_type: 'offline',
     prompt: 'consent',
     scope: scopes, // If you only need one scope you can pass it as string
-    redirect_uri: 'http://localhost:8080/'
+    redirect_uri: 'https://www.rahulp.tech/'
   });
 }
 
