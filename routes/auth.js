@@ -11,6 +11,7 @@ router.get("/", (req, res) => {
 const GOOGLE_CLIENT_ID=process.env.GOOGLE_CLIENT_ID
 const GOOGLE_CLIENT_SECRET=process.env.GOOGLE_CLIENT_SECRET
 
+console.log(GOOGLE_CLIENT_ID);
 const oauth2Client = new google.auth.OAuth2(
   GOOGLE_CLIENT_ID,
   GOOGLE_CLIENT_SECRET,
@@ -24,6 +25,7 @@ function getGoogleAuthURL() {
   /*
    * Generate a url that asks permissions to the user's email and profile
    */
+  console.log(GOOGLE_CLIENT_ID);
   const scopes = [
     'https://www.googleapis.com/auth/userinfo.profile',
     'https://www.googleapis.com/auth/userinfo.email',
@@ -33,7 +35,7 @@ function getGoogleAuthURL() {
     access_type: 'offline',
     prompt: 'consent',
     scope: scopes, // If you only need one scope you can pass it as string
-    redirect_uri: 'https://www.rahulp.tech/'
+    redirect_uri: 'https://localhost'
   });
 }
 
